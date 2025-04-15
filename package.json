@@ -1,0 +1,19 @@
+{
+  "name": "wysiwyg-playground",
+  "module": "src/server/index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun --watch src/server/server.ts",
+    "serve": "bun run build/server/server.js"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@webui-dev/bun-webui": "^2.5.1"
+  }
+}
