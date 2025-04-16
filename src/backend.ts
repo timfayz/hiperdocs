@@ -1,13 +1,7 @@
-// import text from "./../client/index.html" with {type: "text"};
-// // this becomes an internal file path
-// for (const file of Bun.embeddedFiles) {
-//   console.log(file.name); // "logo.png"
-//   console.log(file.size); // 1234
-// }
 import index from "./frontend/index.html";
 
 const server = Bun.serve({
-  port: 3005,
+  port: 3000,
   // development: false,
   routes: {
     /**

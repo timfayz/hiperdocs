@@ -3,15 +3,15 @@ import fs from "node:fs/promises";
 const args = process.argv.slice(2);
 
 // clean
-await fs.rm("./build", { recursive: true, force: true });
+await fs.rm("./out", { recursive: true, force: true });
 
 // build client
 if (args.includes("--client")) {
   await Bun.build({
-    entrypoints: ["./src/client/index.html"],
-    outdir: "./build/client",
+    entrypoints: ["./src/frontend/index.html"],
+    outdir: "./out/frontend",
     target: "browser",
-    //   minify: true,
+    minify: true,
   });
   console.log("client built!");
 }
@@ -21,9 +21,8 @@ if (args.includes("--server")) {
   await Bun.build({
     entrypoints: ["./src/server/main.ts"],
     target: "bun",
-    outdir: "./build",
+    outdir: "./out",
   });
-
   // await Bun.$`bun build --compile src/server/main.ts --outfile ./build/server`;
   console.log("server built!");
 }

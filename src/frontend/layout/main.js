@@ -15,8 +15,6 @@ const main = [
 renderMain(document.body);
 acss.run(theme);
 
-console.log("page loaded");
-
 export function renderMain(node) {
   RV.render(node, main);
 }

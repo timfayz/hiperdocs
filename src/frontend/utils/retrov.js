@@ -135,6 +135,7 @@ function create(v) {
       create_callbacks.push({ el: el, fn: v.p[k] });
       return;
     }
+    el.setAttribute(k, v.p[k]);
     el[k] = v.p[k];
   });
 
