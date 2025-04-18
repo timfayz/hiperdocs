@@ -3,22 +3,21 @@
 
 /**
  * Public API:
- * - run: Shortcut for emitting and attaching CSS to the document's <head>.
+ * - apply: Shortcut for emitting and attaching CSS to the document's <head>.
  * - getClassListFrom: Extracts a class list from an element.
  * - emitCssFromClassList: Emits CSS for a given class list.
  * - attachCssToDocument: Attaches CSS to the document (default) or node.
  */
 
 export default {
-  run,
+  apply,
   emitCssFromClassList,
   attachCssToDocument,
   getClassListFrom,
 };
 
-export function run(theme = false) {
+export function apply(theme = false) {
   const list = getClassListFrom(document.body);
-  console.log(list);
   const css = emitCssFromClassList(list, theme);
   attachCssToDocument(css);
 }
@@ -81,6 +80,7 @@ const propertyShortcuts = {
   // ----------
   c: ["color"],
   fz: ["font-size"],
+  fs: ["font-style"],
   font: ["font-family"],
 
   // Background

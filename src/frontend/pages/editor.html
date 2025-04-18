@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hiperdocs - Where Simple Documents Become Powerful Software</title>
+
+    <!-- 1. Reset CSS (first) -->
+    <link rel="stylesheet" href="../styles/reset.css" />
+
+    <!-- 2. Preload critical resources -->
+    <!-- <link rel="preload" href="styles/main.css" as="style" /> -->
+    <link
+      rel="preload"
+      href="../assets/fonts/Montserrat-VariableFont_wght.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+
+    <!-- 3. Main stylesheet (to be generated) -->
+    <!-- <link rel="stylesheet" href="styles/main.css" /> -->
+
+    <!-- 4. Critical inlined CSS -->
+    <style>
+      @font-face {
+        font-family: "Montserrat";
+        src: url("_bun/asset/9a31ffb20fe835e8.ttf") format("truetype");
+        font-weight: 500;
+        font-display: block;
+      }
+      body {
+        font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans",
+          Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol", "Noto Color Emoji";
+      }
+    </style>
+  </head>
+  <body>
+    <script src="../components/editor.js"></script>
+  </body>
+</html>

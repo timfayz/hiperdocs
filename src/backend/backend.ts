@@ -1,4 +1,5 @@
-import index from "./frontend/index.html";
+import home from "../frontend/pages/home.html";
+import editor from "../frontend/pages/editor.html";
 
 const server = Bun.serve({
   port: 3000,
@@ -7,7 +8,8 @@ const server = Bun.serve({
     /**
      * Client
      */
-    "/": index,
+    "/": home,
+    "/editor": editor,
 
     // "/favicon.ico": new Response(
     //   await Bun.file("./client/assets/favicon.ico").bytes(),

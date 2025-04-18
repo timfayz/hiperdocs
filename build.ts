@@ -7,13 +7,14 @@ await fs.rm("./out", { recursive: true, force: true });
 
 // build client
 if (args.includes("--client")) {
-  await Bun.build({
+  const result = await Bun.build({
     entrypoints: ["./src/frontend/index.html"],
     outdir: "./out/frontend",
     target: "browser",
     minify: true,
   });
   console.log("client built!");
+  console.log(result.outputs);
 }
 
 // build server
