@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  bun:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: bun
+    ports:
+      - 3000:3000
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    container_name: nginx
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - bun
+    volumes:
+      - ./nginx/logs/:/var/log/nginx
+      - /etc/letsencrypt:/etc/certs:ro
