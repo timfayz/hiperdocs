@@ -1,6 +1,6 @@
 {
   "name": "wysiwyg-playground",
-  "module": "src/server/index.ts",
+  "module": "src/backend/backend.ts",
   "type": "module",
   "private": true,
   "devDependencies": {
@@ -8,8 +8,5 @@
   },
   "peerDependencies": {
     "typescript": "^5"
-  },
-  "dependencies": {
-    "@webui-dev/bun-webui": "^2.5.1"
   }
 }
