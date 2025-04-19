@@ -32,8 +32,8 @@ deploy:
       mkdir -p /tmp/hiperdocs &&
       tar -xzvf /tmp/app.tar.gz -C /tmp/hiperdocs &&
       cd /tmp/hiperdocs &&
-      docker-compose down || true &&
-      docker-compose up -d
+      docker compose down || true &&
+      docker compose up -d
       "
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"'
